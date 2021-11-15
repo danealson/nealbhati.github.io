@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
 
-  <h1>Neal Bhatia</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
 
-  <img src="C:\Users\bhati\Desktop/funny.jpg" alt="Neal Bhatia">
-
-  <p>I am not interesting</p>
-  <p>A second short paragraph about yourself or some placeholder text.</p>
-
-  <ul>
-    <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-    <li><strong>Twitter:</strong> <a href="#">coming soon</a></li>
-  </ul>
-
-  <table>
-    <tr>
-      <th>Books</th>
-      <th>Movies</th>
-      <th>Games</th>
-    </tr>
-    <tr>
-      <td>The Hobbit</td>
-      <td>Hot Fuzz</td>
-      <td>Dark Souls</td>
-    </tr>
-    <tr>
-      <td>The Name of the Wind</td>
-      <td>The Avengers</td>
-      <td>The Last of Us</td>
-    </tr>
-    <tr>
-      <td>The Girl With All the Gifts</td>
-      <td>The Matrix</td>
-      <td>Dragon Age: Origins</td>
-    </tr>
-  </table>
-
-  <!-- Bonus link to last class page -->
-  <a href="../../../../1/Activities/04-Stu_MyFirst_HTML/Solved/my-first-bonus.html">My First HTML Bonus</a>
-
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <!-- script src="./static/js/bonus.js"></script -->
+  
 </body>
 
 </html>
